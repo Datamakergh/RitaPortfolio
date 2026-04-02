@@ -502,6 +502,54 @@
     opacity: 0.6;
   }
 
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  .timeline-badge {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0d0d0d;
+    background: var(--gold);
+    padding: 0.25rem 0.7rem;
+    border-radius: 2px;
+    white-space: nowrap;
+    font-weight: 500;
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+  }
+
+  .timeline-badge.tl-years {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--border);
+  }
+
+  /* ── SKILLS CATEGORIES ── */
+  .skills-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 900px;
+  }
+
+  .skill-category {}
+
+  .skill-cat-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
   /* ── SKILLS ── */
   .skills { background: var(--surface); }
 
@@ -735,37 +783,57 @@
   <div class="section-label">Career Journey</div>
   <h2 class="section-title">Work Experience</h2>
   <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-period">Mar 2026 — Present</div>
-      <div class="timeline-role">IT Support</div>
-      <div class="timeline-company">Datamaker Ghana · Adenta</div>
+
+    <div class="timeline-item visible">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-period">March 26, 2026 — Present</div>
+          <div class="timeline-role">IT Support</div>
+          <div class="timeline-company">Datamaker Ghana &middot; Adenta</div>
+        </div>
+        <div class="timeline-badge">Current</div>
+      </div>
       <ul class="timeline-bullets">
-        <li>Occasionally annotate and label datasets to support AI/ML development.</li>
-        <li>Supervise and coordinate the work of current janitorial staff.</li>
-        <li>Manage allocation and recording of supplies to janitors.</li>
+        <li>Occasionally annotate and label datasets according to project guidelines to support AI and machine-learning development.</li>
+        <li>Supervise work of current janitors.</li>
+        <li>Ensure allocation of supplies to janitors and recording them.</li>
       </ul>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-period">2022 — Mar 2026</div>
-      <div class="timeline-role">Data Labeller</div>
-      <div class="timeline-company">Datamaker Ghana · Adenta</div>
+
+    <div class="timeline-item visible">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-period">2022 — March 25, 2026</div>
+          <div class="timeline-role">Data Labeller</div>
+          <div class="timeline-company">Datamaker Ghana &middot; Adenta</div>
+        </div>
+        <div class="timeline-badge tl-years">4 yrs</div>
+      </div>
       <ul class="timeline-bullets">
-        <li>Annotated and labelled datasets per project guidelines to support AI and ML development.</li>
-        <li>Reviewed data carefully to maintain accuracy, consistency, and quality standards.</li>
-        <li>Worked within deadlines handling repetitive tasks with focus and reliability.</li>
-        <li>Used Microsoft Office tools to organise information and support daily workflows.</li>
-        <li>Collaborated with teammates and supervisors to complete tasks efficiently.</li>
+        <li>Annotate and label datasets according to project guidelines to support AI and machine-learning development.</li>
+        <li>Review data carefully to maintain accuracy, consistency, and quality standards.</li>
+        <li>Work within deadlines while handling repetitive tasks with focus and reliability.</li>
+        <li>Use Microsoft Office tools to organise information and support day-to-day work processes.</li>
+        <li>Collaborate with team members and supervisors to complete tasks efficiently and professionally.</li>
       </ul>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-period">2020 — 2022</div>
-      <div class="timeline-role">Janitor</div>
-      <div class="timeline-company">Datamaker Ghana · Adenta</div>
+
+    <div class="timeline-item visible">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-period">2020 — 2022</div>
+          <div class="timeline-role">Janitor</div>
+          <div class="timeline-company">Datamaker Ghana &middot; Adenta</div>
+        </div>
+        <div class="timeline-badge tl-years">2 yrs</div>
+      </div>
       <ul class="timeline-bullets">
-        <li>General cleaning and maintenance of the building.</li>
-        <li>Vacuumed, swept, and mopped floors; maintained clean restrooms.</li>
+        <li>General cleaning of the building and keeping it maintained and in good condition.</li>
+        <li>Vacuum, sweep, and mop floors.</li>
+        <li>Cleaning and stock restrooms.</li>
       </ul>
     </div>
+
   </div>
 </section>
 
@@ -773,15 +841,39 @@
 <section class="skills" id="skills">
   <div class="section-label">What I Bring</div>
   <h2 class="section-title">Core Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-pill">Data Annotation &amp; Labelling</div>
-    <div class="skill-pill">Attention to Detail</div>
-    <div class="skill-pill">Microsoft Word</div>
-    <div class="skill-pill">Microsoft Excel</div>
-    <div class="skill-pill">Microsoft PowerPoint</div>
-    <div class="skill-pill">Time Management</div>
-    <div class="skill-pill">Teamwork &amp; Communication</div>
-    <div class="skill-pill">Following Instructions</div>
+  <div class="skills-categories">
+
+    <div class="skill-category">
+      <div class="skill-cat-title">Data &amp; AI</div>
+      <div class="skills-grid">
+        <div class="skill-pill visible">Data Annotation &amp; Labelling</div>
+        <div class="skill-pill visible">AI &amp; Machine-Learning Support</div>
+        <div class="skill-pill visible">Accuracy &amp; Consistency</div>
+        <div class="skill-pill visible">Quality Review</div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-cat-title">Software &amp; Tools</div>
+      <div class="skills-grid">
+        <div class="skill-pill visible">Microsoft Word</div>
+        <div class="skill-pill visible">Microsoft Excel</div>
+        <div class="skill-pill visible">Microsoft PowerPoint</div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-cat-title">Professional</div>
+      <div class="skills-grid">
+        <div class="skill-pill visible">Attention to Detail</div>
+        <div class="skill-pill visible">Time Management</div>
+        <div class="skill-pill visible">Teamwork &amp; Communication</div>
+        <div class="skill-pill visible">Following Instructions Accurately</div>
+        <div class="skill-pill visible">Team Supervision</div>
+        <div class="skill-pill visible">Supply &amp; Records Management</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -804,7 +896,7 @@
     <p class="contact-desc">I'm open to new opportunities in data annotation, AI support, or IT roles. Feel free to reach out and I'll get back to you as soon as I can.</p>
     <div class="contact-links">
       <a href="tel:0256270528" class="contact-link"><div class="contact-icon">📞</div><span>0256 270 528</span></a>
-      <a href="/cdn-cgi/l/email-protection#a7d5ced3c6ccc6d0c3e7c0cac6cecb89c4c8ca" class="contact-link"><div class="contact-icon">✉</div><span><span class="__cf_email__" data-cfemail="fb89928f9a909a8c9fbb9c969a9297d5989496">[email&#160;protected]</span></span></a>
+      <a href="/cdn-cgi/l/email-protection#3a48534e5b515b4d5e7a5d575b535614595557" class="contact-link"><div class="contact-icon">✉</div><span><span class="__cf_email__" data-cfemail="10627964717b71677450777d71797c3e737f7d">[email&#160;protected]</span></span></a>
       <div class="contact-link"><div class="contact-icon">📍</div><span>Oyarifa, Accra, Ghana</span></div>
     </div>
   </div>
@@ -812,7 +904,7 @@
 
 <footer><p>© 2026 Rita Kwadjoti · Built with care</p></footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   /* ── SCROLL-IN ANIMATIONS ── */
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -859,11 +951,4 @@
   /* ── ACTIVE LINK + SCROLLED STATE ── */
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        allNavLinks.forEach(link => {
-          const match = link.getAttribute('data-section') === id;
-          link.classList.toggle('active', match);
-        });
-      }
-    });
+      if (e
